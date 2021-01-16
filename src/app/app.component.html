@@ -1,18 +1,14 @@
 <h1>Hello World</h1>
-<app-user [childinputproperty]="parentproperty"></app-user>
-<app-admin (childreciver)="parentfunction($event)"></app-admin>
-<table border=1>
-  <tr>
-    <td>Name</td>
-    <td>Gender</td>
-    <td>Age</td>
-    <td>Email</td>
-  </tr>
+<h2>{{name | uppercase}}</h2>
+<h2>{{name | lowercase}}</h2>
+<h2>{{name | titlecase}}</h2>
+<h2>Date : {{date | date}}</h2>
+<h2>Medium : {{date | date:'medium'}}</h2>
+<h2>fullDate : {{date | date:'fullDate'}}</h2>
+<h2>dd-mm-yyyy : {{date | date:'dd-mm-yyyy'}}</h2>
+<h2>shortTime : {{date | date:'shortTime'}}</h2>
+<h2>mm:ss : {{date | date:'mm:ss'}}</h2>
+<h2>currency : {{2000 | currency:'USD'}}</h2>
+<h2>currency : {{2000 | currency:'Rs. '}}</h2>
+<h2>{{sometext | slice:2:sometext.length}}</h2>
 
-  <tr *ngFor = "let admin of childAdminObject">
-    <td>{{admin.name}}</td>
-    <td>{{admin.gender}}</td>
-    <td>{{admin.age}}</td>
-    <td>{{admin.email}}</td>
-  </tr>
-</table>

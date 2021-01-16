@@ -7,24 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'blogs';
-
-  parentproperty = [
-    {
-      name: 'ahsan',
-      age:25
-    },
-    {
-      name:'asim',
-      age:24
-    },
-    {
-      name:'sumaya',
-      age:26
-    }
-
-  ]
-  childAdminObject:any;
-  parentfunction($event){
-    this.childAdminObject = $event;
-  }
+  name = 'muhammad aHsaN'
+  date  = Date.now();
+  sometext = "This is my Some String King for Slicing";
 }
