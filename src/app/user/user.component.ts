@@ -6,12 +6,12 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
-  @Input() parentproperty: any;
+  @Input() childinputproperty: any;
 
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.parentproperty)
+    console.log(this.childinputproperty)
   }
 
 }

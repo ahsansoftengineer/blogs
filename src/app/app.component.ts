@@ -7,7 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'blogs';
-  property = [
+
+  parentproperty = [
     {
       name: 'ahsan',
       age:25
@@ -20,5 +21,10 @@ export class AppComponent {
       name:'sumaya',
       age:26
     }
-]
+
+  ]
+  childAdminObject:any;
+  parentfunction($event){
+    this.childAdminObject = $event;
+  }
 }
