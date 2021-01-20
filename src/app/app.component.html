@@ -1,12 +1,14 @@
 <h1>Angular Template Driven Form</h1>
 
 <div class="col-sm-6">
-  <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+  <form [formGroup]="loginForm">
     <div class="form-group">
-      <input ngModel type="email" name="name" class="form-control" placeholder="Enter email">
+      <input type="email" class="form-control" formControlName="email" placeholder="Enter email">
+      <span style="color:red" *ngIf="email.invalid && email.touched">Email is required</span>
     </div>
     <div class="form-group">
-      <input ngModel type="password" name="password" class="form-control" placeholder="Password">
+      <input type="password" class="form-control" formControlName="password" placeholder="Password">
+      <span style="color:red" *ngIf="password.invalid && password.touched">password is required</span>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
