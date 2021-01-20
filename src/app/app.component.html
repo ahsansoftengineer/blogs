@@ -1,7 +1,7 @@
 <h1>Angular Template Driven Form</h1>
 
 <div class="col-sm-6">
-  <form [formGroup]="loginForm">
+  <form [formGroup]="loginForm" #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
     <div class="form-group">
       <input type="email" class="form-control" formControlName="email" placeholder="Enter email">
       <span style="color:red" *ngIf="email.invalid && email.touched">Email is required</span>
