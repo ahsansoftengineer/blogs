@@ -1,14 +1,13 @@
-<h1>Hello World</h1>
-<h2>{{name | uppercase}}</h2>
-<h2>{{name | lowercase}}</h2>
-<h2>{{name | titlecase}}</h2>
-<h2>Date : {{date | date}}</h2>
-<h2>Medium : {{date | date:'medium'}}</h2>
-<h2>fullDate : {{date | date:'fullDate'}}</h2>
-<h2>dd-mm-yyyy : {{date | date:'dd-mm-yyyy'}}</h2>
-<h2>shortTime : {{date | date:'shortTime'}}</h2>
-<h2>mm:ss : {{date | date:'mm:ss'}}</h2>
-<h2>currency : {{2000 | currency:'USD'}}</h2>
-<h2>currency : {{2000 | currency:'Rs. '}}</h2>
-<h2>{{sometext | slice:2:sometext.length}}</h2>
+<h1>Angular Template Driven Form</h1>
 
+<div class="col-sm-6">
+  <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+    <div class="form-group">
+      <input ngModel type="email" name="name" class="form-control" placeholder="Enter email">
+    </div>
+    <div class="form-group">
+      <input ngModel type="password" name="password" class="form-control" placeholder="Password">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
